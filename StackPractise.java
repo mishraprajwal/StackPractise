@@ -21,8 +21,16 @@ public class StackPractise {
             int k = scanner.nextInt();
 
             for (int i = 0; i < k; i++) {
-                popFromStack(stack);
+                if (!stack.isEmpty()) {
+                    int y = popFromStack(stack);
+                    System.out.println("Popped: " + y);
+                } else {
+                    System.out.println("Stack is empty, cannot pop more elements.");
+                    break;
+                }
             }
+
+            System.out.println("The element at the top of the stack is: " + stack.peek());
 
             System.out.println("Stack: " + stack);
 
@@ -34,7 +42,7 @@ public class StackPractise {
         stack.push(data);
     }
 
-    public static void popFromStack(Stack<Integer> stack) {
-        stack.pop();
+    public static int popFromStack(Stack<Integer> stack) {
+        return stack.pop();
     }
 }
