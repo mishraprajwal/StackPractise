@@ -45,4 +45,5 @@ public class StackPractise {
     public static int popFromStack(Stack<Integer> stack) {
         return stack.pop();
     }
+
 }
